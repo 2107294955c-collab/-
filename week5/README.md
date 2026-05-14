@@ -4,5 +4,6 @@
 - 深入练习 Linux 权限管理（chmod, chown）。
 - 学习机器人 TF2 坐标变换，理解 Base_link 与 Odom 之间的关系。
 
-## 2. 实验截图
-<img src="img/week5.png" width="800">
+
+## 2. 实验录屏
+[点击此处查看实验录屏视频](img/录屏 2026-04-02 10-56-36.mp4)
