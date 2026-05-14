@@ -16,3 +16,4 @@
 不再仅依赖键盘控制，而是通过终端命令直接向 `/turtle1/cmd_vel` 话题发送指令：
 ```bash
 ros2 topic pub --once /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}"
+![实验截图](img/粘贴的图像.png)
