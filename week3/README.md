@@ -1,19 +1,20 @@
-# Week 03：ROS 2 话题发布与小乌龟运动控制
+# Week 03: GitHub SSH、VS Code 与 ROS 2 交互
 
 ## 1. 实验目标
-- 学习如何通过命令行工具手动发布话题消息（`ros2 topic pub`）。
-- 掌握 `geometry_msgs/msg/Twist` 消息结构，实现对机器人运动的精准控制。
-- 观察不同线速度（Linear）与角速度（Angular）组合下小乌龟的运动轨迹。
+- 掌握通过 VS Code 远程连接并编辑 WSL 环境中的文件。
+- 练习 Git 的分支管理与版本回退。
+- 在 ROS 2 环境中测试节点通信。
 
-## 2. 实验环境
-- **操作系统**: Ubuntu 24.04 LTS
-- **机器人框架**: ROS 2 Jazzy
-- **核心工具**: Turtlesim, Terminal
+## 2. 实验内容
+### 2.1 远程开发
+通过 Remote-WSL 插件，在 VS Code 中直接操作 Ubuntu 文件系统。
 
-## 3. 实验内容与步骤
+### 2.2 节点控制
+运行了 `turtlesim` 节点，并尝试通过命令行发布速度指令。
 
-### 3.1 手动发布控制指令
-不再仅依赖键盘控制，而是通过终端命令直接向 `/turtle1/cmd_vel` 话题发送指令：
+## 3. 实验截图
+<img src="img/粘贴的图像.png" width="800" alt="Week 3 截图">
+
+## 4. 运行命令
 ```bash
-ros2 topic pub --once /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}"
-![实验截图](img/粘贴的图像.png)
+ros2 topic pub /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}"
