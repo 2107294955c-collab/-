@@ -23,3 +23,9 @@ Kitti 数据集包含 Velodyne 激光雷达扫描数据（`.bin` 文件）和前
 - **运行命令**:
   ```bash
   ros2 run ros2_kitti_publishers publisher_node
+  ### 3.3 RViz2 可视化配置
+#### ROS 2 & RQT 同步视图截图
+<img src="img/粘贴的图像.png" width="800" alt="Kitti 可视化">
+
+#### RViz2 3D 点云视图截图
+<img src="img/粘贴的图像.png" width="800" alt="点云视图">
