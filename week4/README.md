@@ -1,19 +1,14 @@
-# Week 04：PyBullet 仿真环境搭建与四足机器人加载
+### Week 4: 机器人仿真基础
+**文件路径：** `week4/README.md`
+```markdown
+# Week 04: 机器人基础与 Python 仿真
 
 ## 1. 实验目标
-- 学习并安装 **PyBullet** 物理仿真引擎。
-- 掌握加载机器人描述文件（URDF）的基本流程。
-- 在仿真环境中初始化四足机器人模型，并观察其默认物理状态。
+- 编写 Python 脚本调用 ROS 2 API。
+- 实现小乌龟的自动化路径运动。
 
-## 2. 实验环境
-- **操作系统**: Ubuntu 24.04 LTS
-- **仿真引擎**: PyBullet (Bullet Physics)
-- **编程语言**: Python 3
-- **参考课件**: 《ai_robot_0325.pptx》第 56 页
+## 2. 实验内容
+完成了控制脚本的编写，实现了小乌龟画圆及画正方形的逻辑。
 
-## 3. 实验内容与步骤
-
-### 3.1 PyBullet 环境配置
-在终端中完成了物理引擎库的安装与验证：
-```bash
-pip install pybullet
+## 3. 实验截图
+<img src="img/粘贴的图像.png" width="800">
