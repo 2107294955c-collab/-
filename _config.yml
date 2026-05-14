@@ -1,0 +1,11 @@
+# 网站标题
+title: 我的机器人课程作业
+
+# 网站描述
+description: AI Robotics 课程作业整理
+
+# 启用 Cayman 主题
+theme: jekyll-theme-cayman
+
+# 隐藏下载按钮（让页面更干净）
+show_downloads: false
