@@ -1,85 +1,77 @@
-# AI Robot Homework
+# AI Robot Homework Archive
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=190&color=0:111827,45:2563EB,100:10B981&text=AI%20ROBOT%20HOMEWORK&fontColor=FFFFFF&fontSize=38&fontAlignY=38&desc=Weekly%20Reports%20%7C%20Code%20%7C%20Images%20%7C%20Submission%20Rubric&descAlignY=58&animation=fadeIn" alt="AI Robot Homework banner" />
+<pre>
++------------------------------------------------------------+
+|                 AI ROBOT HOMEWORK ARCHIVE                 |
+|        monochrome weekly logs / code / media evidence      |
++------------------------------------------------------------+
+</pre>
 
-![README](https://img.shields.io/badge/README-required-10B981?style=for-the-badge)
-![Images](https://img.shields.io/badge/images-recommended-2563EB?style=for-the-badge)
-![Code](https://img.shields.io/badge/code-required%20when%20available-F97316?style=for-the-badge)
-![Git](https://img.shields.io/badge/git-commit%20records-111827?style=for-the-badge&logo=git&logoColor=white)
-
-**AI Robot course homework archive with standardized weekly folders and grading checklist**
+**2107294955c-collab · AI Robot course repository**
 
 </div>
 
 ---
 
-## 总说明
+## Repository Purpose
 
-本仓库用于提交 AI Robot 课程每周作业。根目录 README 作为总目录，每个 week 文件夹作为独立作业单元，必须包含该周 README；有代码时放入 code 或直接提交源文件，有截图或效果图时放入 images / screenshots / img 文件夹。
+This repository keeps the AI Robot course work in a clear homework archive. The structure is optimized for review: every submitted week has its own folder, every folder has a README, and the README explains the task, environment, commands, evidence, and learning result. The design is intentionally black and white so the repository looks like a clean lab record rather than a decorative landing page.
 
-## 标准目录格式
+## Submission Structure
 
 <pre>
 ai-robot-homework/
-|-- README.md              # 总说明
+|-- README.md              # main overview
 |-- week1/
-|   |-- README.md          # 必须
-|   |-- screenshots/       # 推荐
-|-- week2/
-|   |-- README.md          # 必须
-|   |-- screenshots/       # 推荐
+|   |-- README.md          # required weekly report
+|   |-- screenshots/       # recommended when screenshots exist
 |-- week3/
-|   |-- README.md          # 必须
-|   |-- code/              # 有代码时必须
-|   |-- images/            # 推荐
+|   |-- README.md          # required weekly report
+|   |-- code/              # required when source code exists
+|   |-- images/            # screenshots or output images
 |-- week4/
-|   |-- README.md          # 必须
-|   |-- *.py               # Python 作业
-|   |-- images/            # 推荐
+|   |-- README.md          # required weekly report
+|   |-- *.py               # Python homework when available
+|   |-- images/            # experiment media
 |-- ...
-|-- week13/
-|   |-- README.md          # 必须
-|   |-- code/              # 代码
-|   |-- demo.mp4           # 期末项目演示视频
-|   |-- docs/              # 文档
 |-- week14/
-|   |-- README.md          # 必须
-|   |-- images/            # 推荐
+|   |-- README.md          # simulation/debug report
+|   |-- img/               # result screenshots
 |-- week15/
-|   |-- README.md          # 必须
-|   |-- images/            # 推荐
+|   |-- README.md          # remote camera report
+|   |-- img/               # detection result
 </pre>
 
-## 作业索引
+## Review-Oriented Improvements
 
-| 周次 | 主题 | 内容状态 | 链接 |
+- Weekly README files are expanded into report-style records instead of short placeholders.
+- Existing screenshots and videos are linked from their matching week pages.
+- Weeks with code-oriented work include command sections and code-file expectations.
+- Remote camera notes use a WebSocket-style access pattern, written as ws://<tailscale-ip>:5000, to match the requested Codex optimization.
+- Empty weeks are documented honestly as archive or organization weeks instead of being left blank.
+
+## Week Index
+
+| Week | Topic | Evidence | Link |
 | --- | --- | --- | --- |
-| week1 | 环境准备与工具安装 | README | [查看](./week1) |
-| week2 | Ubuntu 24.04 与 ROS2 初探 | README | [查看](./week2) |
-| week3 | GitHub SSH、VS Code 与 ROS2 交互 | README + 图片 | [查看](./week3) |
-| week4 | 命令行、机器人基础与 Python 仿真 | README | [查看](./week4) |
-| week5 | Linux 操作与机器人运动学 | README + 视频 | [查看](./week5) |
-| week6 | KITTI 数据集与多传感器可视化 | README + 图片 | [查看](./week6) |
-| week7 | Markdown 与 GitHub 作业整理 | README | [查看](./week7) |
-| week8 | Docker ROS2 桌面容器 | README + 图片 | [查看](./week8) |
-| week10 | Docker 概念与 OpenCV 实验 | README + 图片 | [查看](./week10) |
-| week11 | 截图记录与部署验证 | README + 图片 | [查看](./week11) |
-| week14 | Laikago 四足机器人稳定性调试 | README + 图片 | [查看](./week14) |
-| week15 | Tailscale 移动端摄像头图传 | README + 图片 | [查看](./week15) |
+| week1 | Environment setup and tool installation | README | [Open](./week1) |
+| week2 | Ubuntu 24.04 and ROS2 environment | README | [Open](./week2) |
+| week3 | GitHub SSH, VS Code, ROS2 interaction | Image | [Open](./week3) |
+| week4 | Command line, robot basics, Python simulation | README | [Open](./week4) |
+| week5 | Linux operations and robot kinematics | Video | [Open](./week5) |
+| week6 | KITTI dataset and multi-sensor visualization | Image | [Open](./week6) |
+| week7 | Markdown and GitHub organization | README | [Open](./week7) |
+| week8 | Docker ROS2 desktop container | Image | [Open](./week8) |
+| week10 | Docker and OpenCV experiment | Image | [Open](./week10) |
+| week11 | Screenshot archive and verification | Image | [Open](./week11) |
+| week14 | Laikago stability debugging | Image | [Open](./week14) |
+| week15 | Tailscale mobile camera bridge | Image | [Open](./week15) |
 
-## 提交建议
+## How To Review
 
-- 每周作业单独放在对应 week 文件夹中。
-- README 需要包含实验目标、实验环境、操作步骤、运行命令、结果展示和总结。
-- 图片、视频、代码文件尽量和 README 放在同一个 week 文件夹内，便于老师查看。
-- 每次完成作业后及时 commit 并 push，保持提交记录清楚。
-
----
-
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&height=110&section=footer&color=0:10B981,50:2563EB,100:111827" alt="footer wave" />
-
-</div>
+1. Open the week folder from the index.
+2. Read the weekly README from top to bottom.
+3. Check the linked screenshot, video, or command output.
+4. Review commit history to confirm regular submission progress.

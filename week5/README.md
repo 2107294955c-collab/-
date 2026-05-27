@@ -1,59 +1,45 @@
-# Week 05 - Linux 操作与机器人运动学
+# Week 05 - Linux Operations And Robot Kinematics
 
-## 1. 作业说明
+## Task Goal
 
-本周练习 Linux 文件权限与目录操作，同时学习机器人坐标系和运动学基础。
+This week combines Linux file operations with robot kinematics concepts. The key idea is that robot development requires both system-level skill and coordinate-frame understanding.
 
-## 2. 文件结构
+## Folder Check
 
 <pre>
 week5/
-|-- README.md              # 必须
-|-- img/                   # 实验录屏
+|-- README.md          # required report
+|-- img/               # recording evidence
 </pre>
 
-## 3. 实验环境
+## Environment
 
-- Linux Terminal
-- TF2 概念
+- Linux terminal
 - GitHub Markdown
+- Robot TF / coordinate-frame concepts
 
-## 4. 实验步骤
+## Steps
 
-1. 练习 chmod、chown、ls 等命令。
-2. 学习 base_link、odom 等坐标关系。
-3. 整理实验录屏。
+1. Practice Linux commands such as permission and ownership operations.
+2. Study base_link and odom relationships.
+3. Record the experiment process as a video.
 
-## 5. 运行命令
+## Commands
 
-<pre><code class="language-bash">
-chmod
+<pre><code>chmod
 chown
-ls -la
-</code></pre>
+ls -la</code></pre>
 
-## 6. 结果展示
+## Result
 
-<video src="img/录屏 2026-04-02 10-56-36.webm" width="800" controls>实验录屏</video>
+<video src="img/录屏 2026-04-02 10-56-36.webm" width="800" controls>experiment recording</video>
 
-[查看原始视频](img/录屏 2026-04-02 10-56-36.webm)
+[Open original recording](img/录屏 2026-04-02 10-56-36.webm)
 
-## 7. 学习总结
+## Summary
 
-Linux 基础操作和坐标系理解都是机器人开发中非常重要的基础能力。
-
-## 8. 评分自查
-
-| 项目 | 状态 | 说明 |
-| --- | --- | --- |
-| 提交 week 文件夹 | 完成 | 已建立本周目录 |
-| README.md 存在 | 完成 | 已按统一模板编写 |
-| README 内容详细 | 完成 | 包含目标、环境、步骤、结果和总结 |
-| 包含图片 / 视频 | 视本周任务 | 有实验素材时已引用 |
-| 包含代码 | 视本周任务 | 有代码作业时提交源码 |
-| 有提交记录 | 完成 | 通过 Git 提交 |
-| 按时提交 | 待确认 | 以课程截止时间为准 |
+Linux permissions affect whether scripts and robot packages can run correctly. Coordinate-frame knowledge is also necessary for understanding how robots locate themselves in space.
 
 ---
 
-[返回总目录](../README.md)
+[Back to main archive](../README.md)

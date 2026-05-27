@@ -1,58 +1,46 @@
-# Week 06 - KITTI 数据集与多传感器可视化
+# Week 06 - KITTI Dataset And Multi-Sensor Visualization
 
-## 1. 作业说明
+## Task Goal
 
-本周学习 KITTI 数据解析，并使用 ROS2、RViz2、RQT 展示点云和图像信息。
+This week works with KITTI-style sensor data and ROS2 visualization. The goal is to publish point cloud and image data, then inspect the result with visualization tools.
 
-## 2. 文件结构
+## Folder Check
 
 <pre>
 week6/
-|-- README.md              # 必须
-|-- img/                   # 截图、效果图
+|-- README.md          # required report
+|-- img/               # visualization image
 </pre>
 
-## 3. 实验环境
+## Environment
 
 - ROS2 Jazzy
 - KITTI Raw Dataset
 - RViz2
 - RQT
+- cv_bridge
 
-## 4. 实验步骤
+## Steps
 
-1. 理解 KITTI 数据集结构。
-2. 发布点云和图像话题。
-3. 使用 RViz2/RQT 查看多传感器数据。
+1. Study the KITTI dataset structure.
+2. Convert point cloud and image data into ROS2 messages.
+3. Run the publisher node.
+4. Inspect the output with RViz2 and RQT.
 
-## 5. 运行命令
+## Commands
 
-<pre><code class="language-bash">
-ros2 run ros2_kitti_publishers publisher_node
+<pre><code>ros2 run ros2_kitti_publishers publisher_node
 rviz2
-rqt
-</code></pre>
+rqt</code></pre>
 
-## 6. 结果展示
+## Result
 
-<img src="img/粘贴的图像.png" width="800" alt="KITTI 可视化截图">
+<img src="img/粘贴的图像.png" width="800" alt="KITTI visualization screenshot">
 
-## 7. 学习总结
+## Summary
 
-理解了多传感器数据在 ROS2 中的组织方式，也熟悉了 RViz2 的可视化作用。
-
-## 8. 评分自查
-
-| 项目 | 状态 | 说明 |
-| --- | --- | --- |
-| 提交 week 文件夹 | 完成 | 已建立本周目录 |
-| README.md 存在 | 完成 | 已按统一模板编写 |
-| README 内容详细 | 完成 | 包含目标、环境、步骤、结果和总结 |
-| 包含图片 / 视频 | 视本周任务 | 有实验素材时已引用 |
-| 包含代码 | 视本周任务 | 有代码作业时提交源码 |
-| 有提交记录 | 完成 | 通过 Git 提交 |
-| 按时提交 | 待确认 | 以课程截止时间为准 |
+Multi-sensor visualization is a key robot perception skill. This week strengthens the connection between datasets, ROS2 message types, and visual debugging tools.
 
 ---
 
-[返回总目录](../README.md)
+[Back to main archive](../README.md)

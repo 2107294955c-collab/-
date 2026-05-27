@@ -1,58 +1,44 @@
-# Week 03 - GitHub SSH、VS Code 与 ROS2 交互
+# Week 03 - GitHub SSH, VS Code And ROS2 Interaction
 
-## 1. 作业说明
+## Task Goal
 
-本周练习 VS Code Remote-WSL 开发流程，并通过 ROS2 topic 命令控制 turtlesim。
+This week connects development workflow with ROS2 interaction. The task is to use VS Code Remote-WSL and publish ROS2 messages to control turtlesim movement.
 
-## 2. 文件结构
+## Folder Check
 
 <pre>
 week3/
-|-- README.md              # 必须
-|-- img/                   # 实验截图
-|-- code/                  # 有代码时必须
+|-- README.md          # required report
+|-- code/              # required when code exists
+|-- img/               # experiment image
 </pre>
 
-## 3. 实验环境
+## Environment
 
 - VS Code Remote-WSL
 - ROS2
-- Git
 - turtlesim
+- GitHub SSH
 
-## 4. 实验步骤
+## Steps
 
-1. 使用 VS Code 连接 WSL。
-2. 启动 turtlesim 节点。
-3. 发布 Twist 消息控制小乌龟运动。
-4. 截图记录实验结果。
+1. Open the Linux workspace from VS Code.
+2. Start turtlesim.
+3. Publish a Twist message to the velocity topic.
+4. Save the screenshot as experiment evidence.
 
-## 5. 运行命令
+## Commands
 
-<pre><code class="language-bash">
-ros2 topic pub /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0}, angular: {z: 1.8}}"
-</code></pre>
+<pre><code>ros2 topic pub /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0}, angular: {z: 1.8}}"</code></pre>
 
-## 6. 结果展示
+## Result
 
-<img src="img/粘贴的图像.png" width="800" alt="Week 3 ROS2 实验截图">
+<img src="img/粘贴的图像.png" width="800" alt="Week 3 ROS2 interaction screenshot">
 
-## 7. 学习总结
+## Summary
 
-通过本周实验理解了 ROS2 topic 的发布机制，以及 VS Code 远程开发的便利性。
-
-## 8. 评分自查
-
-| 项目 | 状态 | 说明 |
-| --- | --- | --- |
-| 提交 week 文件夹 | 完成 | 已建立本周目录 |
-| README.md 存在 | 完成 | 已按统一模板编写 |
-| README 内容详细 | 完成 | 包含目标、环境、步骤、结果和总结 |
-| 包含图片 / 视频 | 视本周任务 | 有实验素材时已引用 |
-| 包含代码 | 视本周任务 | 有代码作业时提交源码 |
-| 有提交记录 | 完成 | 通过 Git 提交 |
-| 按时提交 | 待确认 | 以课程截止时间为准 |
+This week shows how topic publishing changes robot behavior. It also confirms that VS Code, WSL, ROS2, and GitHub workflow can be used together.
 
 ---
 
-[返回总目录](../README.md)
+[Back to main archive](../README.md)

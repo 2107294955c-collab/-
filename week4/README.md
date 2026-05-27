@@ -1,58 +1,44 @@
-# Week 04 - 命令行、机器人基础与 Python 仿真
+# Week 04 - Command Line And Python Simulation
 
-## 1. 作业说明
+## Task Goal
 
-本周围绕命令行、机器人基础概念和 Python 仿真展开，练习用脚本表达简单运动逻辑。
+This week practices command-line operation, robot basics, and Python simulation thinking. The task is to move from manual command execution toward repeatable scripted robot behavior.
 
-## 2. 文件结构
+## Folder Check
 
 <pre>
 week4/
-|-- README.md              # 必须
-|-- *.py                   # Python 作业
-|-- images/                # 推荐
+|-- README.md          # required report
+|-- *.py               # Python homework when available
+|-- images/            # recommended media
 </pre>
 
-## 3. 实验环境
+## Environment
 
 - Python
-- ROS2 基础概念
+- ROS2 concepts
 - Terminal
 
-## 4. 实验步骤
+## Steps
 
-1. 复习命令行操作。
-2. 理解机器人节点和运动控制概念。
-3. 编写或整理 Python 仿真思路。
-4. 记录实验过程。
+1. Review command-line workflow.
+2. Study simple robot motion concepts.
+3. Prepare Python simulation logic.
+4. Record the workflow in README form.
 
-## 5. 运行命令
+## Commands
 
-<pre><code class="language-bash">
-python3 motion_script.py
-ros2 topic list
-</code></pre>
+<pre><code>python3 motion_script.py
+ros2 topic list</code></pre>
 
-## 6. 结果展示
+## Result
 
-本周重点是从手动命令过渡到脚本化控制，为后续机器人仿真做准备。
+This week documents the transition from manual terminal control to scripted motion logic.
 
-## 7. 学习总结
+## Summary
 
-认识到 Python 脚本可以把重复的机器人控制命令自动化，提升实验效率。
-
-## 8. 评分自查
-
-| 项目 | 状态 | 说明 |
-| --- | --- | --- |
-| 提交 week 文件夹 | 完成 | 已建立本周目录 |
-| README.md 存在 | 完成 | 已按统一模板编写 |
-| README 内容详细 | 完成 | 包含目标、环境、步骤、结果和总结 |
-| 包含图片 / 视频 | 视本周任务 | 有实验素材时已引用 |
-| 包含代码 | 视本周任务 | 有代码作业时提交源码 |
-| 有提交记录 | 完成 | 通过 Git 提交 |
-| 按时提交 | 待确认 | 以课程截止时间为准 |
+Python scripting helps make robot experiments repeatable. Even when the task is basic, recording commands and intended output makes the week easier to evaluate.
 
 ---
 
-[返回总目录](../README.md)
+[Back to main archive](../README.md)
