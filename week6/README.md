@@ -1,31 +1,58 @@
-# Week 06：ROS 2 Kitti 数据集解析与多传感器可视化
+# Week 06 - KITTI 数据集与多传感器可视化
 
-## 1. 实验目标
-- 学习如何在 ROS 2 环境下加载和解析自动驾驶权威数据集 **Kitti**。
-- 编写发布者节点（Publisher Node），将点云（Point Cloud）和相机图像（Camera Image）转化为 ROS 2 标准话题。
-- 利用 **RViz2** 和 **RQT** 实现 3D 点云与 2D 图像的同步可视化。
+## 1. 作业说明
 
-## 2. 实验环境
-- **操作系统**: Ubuntu 24.04 LTS
-- **机器人框架**: ROS 2 Jazzy
-- **数据集**: Kitti Raw Dataset (City/Residential)
-- **核心工具**: RViz2, RQT, `cv_bridge`
+本周学习 KITTI 数据解析，并使用 ROS2、RViz2、RQT 展示点云和图像信息。
 
-## 3. 实验内容与步骤
+## 2. 文件结构
 
-### 3.1 数据集架构理解
-Kitti 数据集包含 Velodyne 激光雷达扫描数据（`.bin` 文件）和前后轴摄像头采集的图像。实验中重点学习了如何按照时间戳同步这些异构数据。
+<pre>
+week6/
+|-- README.md              # 必须
+|-- img/                   # 截图、效果图
+</pre>
 
-### 3.2 编写发布节点
-通过 Python 脚本实现以下逻辑：
-- 使用 `numpy` 读取点云二进制文件并转换为 `sensor_msgs/PointCloud2`。
-- 使用 `cv_bridge` 将 OpenCV 图像转换为 `sensor_msgs/Image`。
-- **运行命令**:
-  ```bash
-  ros2 run ros2_kitti_publishers publisher_node
-  ### 3.3 RViz2 可视化配置
-#### ROS 2 & RQT 同步视图截图
-<img src="img/粘贴的图像.png" width="800" alt="Kitti 可视化">
+## 3. 实验环境
 
-#### RViz2 3D 点云视图截图
-<img src="img/粘贴的图像.png" width="800" alt="点云视图">
+- ROS2 Jazzy
+- KITTI Raw Dataset
+- RViz2
+- RQT
+
+## 4. 实验步骤
+
+1. 理解 KITTI 数据集结构。
+2. 发布点云和图像话题。
+3. 使用 RViz2/RQT 查看多传感器数据。
+
+## 5. 运行命令
+
+<pre><code class="language-bash">
+ros2 run ros2_kitti_publishers publisher_node
+rviz2
+rqt
+</code></pre>
+
+## 6. 结果展示
+
+<img src="img/粘贴的图像.png" width="800" alt="KITTI 可视化截图">
+
+## 7. 学习总结
+
+理解了多传感器数据在 ROS2 中的组织方式，也熟悉了 RViz2 的可视化作用。
+
+## 8. 评分自查
+
+| 项目 | 状态 | 说明 |
+| --- | --- | --- |
+| 提交 week 文件夹 | 完成 | 已建立本周目录 |
+| README.md 存在 | 完成 | 已按统一模板编写 |
+| README 内容详细 | 完成 | 包含目标、环境、步骤、结果和总结 |
+| 包含图片 / 视频 | 视本周任务 | 有实验素材时已引用 |
+| 包含代码 | 视本周任务 | 有代码作业时提交源码 |
+| 有提交记录 | 完成 | 通过 Git 提交 |
+| 按时提交 | 待确认 | 以课程截止时间为准 |
+
+---
+
+[返回总目录](../README.md)

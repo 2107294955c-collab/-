@@ -1,12 +1,97 @@
-## 课程作业目录
+# AI Robot Homework
 
-- [Week 1: 环境准备](week1/)
-- [Week 2: WSL、Ubuntu 与 ROS2 环境配置](week2/)
-- [Week 3: GitHub SSH、VS Code 与 ROS2 交互](week3/)
-- [Week 4: 命令行、机器人基础与 Python 仿真](week4/)
-- [Week 5: Linux 目录操作与机器人运动学](week5/)
-- [Week 6: 传感器介绍与 ROS2 KITTI 实验](week6/)
-- [Week 7: Markdown 与 GitHub 作业整理](week7/)
-- [Week 8: Docker 安装与 ROS2 桌面容器](week8/)
-- [Week 9: (请根据实际内容填写标题)](week9/)
-- [Week 10: Docker 概念与 OpenCV 实验](week10/)
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=190&color=0:111827,45:2563EB,100:10B981&text=AI%20ROBOT%20HOMEWORK&fontColor=FFFFFF&fontSize=38&fontAlignY=38&desc=Weekly%20Reports%20%7C%20Code%20%7C%20Images%20%7C%20Submission%20Rubric&descAlignY=58&animation=fadeIn" alt="AI Robot Homework banner" />
+
+![README](https://img.shields.io/badge/README-required-10B981?style=for-the-badge)
+![Images](https://img.shields.io/badge/images-recommended-2563EB?style=for-the-badge)
+![Code](https://img.shields.io/badge/code-required%20when%20available-F97316?style=for-the-badge)
+![Git](https://img.shields.io/badge/git-commit%20records-111827?style=for-the-badge&logo=git&logoColor=white)
+
+**AI Robot course homework archive with standardized weekly folders and grading checklist**
+
+</div>
+
+---
+
+## 总说明
+
+本仓库用于提交 AI Robot 课程每周作业。根目录 README 作为总目录，每个 week 文件夹作为独立作业单元，必须包含该周 README；有代码时放入 code 或直接提交源文件，有截图或效果图时放入 images / screenshots / img 文件夹。
+
+## 标准目录格式
+
+<pre>
+ai-robot-homework/
+|-- README.md              # 总说明
+|-- week1/
+|   |-- README.md          # 必须
+|   |-- screenshots/       # 推荐
+|-- week2/
+|   |-- README.md          # 必须
+|   |-- screenshots/       # 推荐
+|-- week3/
+|   |-- README.md          # 必须
+|   |-- code/              # 有代码时必须
+|   |-- images/            # 推荐
+|-- week4/
+|   |-- README.md          # 必须
+|   |-- *.py               # Python 作业
+|   |-- images/            # 推荐
+|-- ...
+|-- week13/
+|   |-- README.md          # 必须
+|   |-- code/              # 代码
+|   |-- demo.mp4           # 期末项目演示视频
+|   |-- docs/              # 文档
+|-- week14/
+|   |-- README.md          # 必须
+|   |-- images/            # 推荐
+|-- week15/
+|   |-- README.md          # 必须
+|   |-- images/            # 推荐
+</pre>
+
+## 评分标准
+
+| 项目 | 分数 | 说明 |
+| --- | --- | --- |
+| 提交 week 文件夹 | 基础分 | 必须有 |
+| README.md 存在 | +30分 | 基本文档 |
+| README 内容详细 | +10分 | 大于 500 字符 |
+| 包含图片 | +20分 | 截图、效果图 |
+| 包含代码 | +20分 | .py、.cpp、.launch.py 等 |
+| 有提交记录 | +10分 | git commit 次数 |
+| 按时提交 | +10分 | 在截止日期前 |
+
+## 作业索引
+
+| 周次 | 主题 | 内容状态 | 链接 |
+| --- | --- | --- | --- |
+| week1 | 环境准备与工具安装 | README | [查看](./week1) |
+| week2 | Ubuntu 24.04 与 ROS2 初探 | README | [查看](./week2) |
+| week3 | GitHub SSH、VS Code 与 ROS2 交互 | README + 图片 | [查看](./week3) |
+| week4 | 命令行、机器人基础与 Python 仿真 | README | [查看](./week4) |
+| week5 | Linux 操作与机器人运动学 | README + 视频 | [查看](./week5) |
+| week6 | KITTI 数据集与多传感器可视化 | README + 图片 | [查看](./week6) |
+| week7 | Markdown 与 GitHub 作业整理 | README | [查看](./week7) |
+| week8 | Docker ROS2 桌面容器 | README + 图片 | [查看](./week8) |
+| week10 | Docker 概念与 OpenCV 实验 | README + 图片 | [查看](./week10) |
+| week11 | 截图记录与部署验证 | README + 图片 | [查看](./week11) |
+| week14 | Laikago 四足机器人稳定性调试 | README + 图片 | [查看](./week14) |
+| week15 | Tailscale 移动端摄像头图传 | README + 图片 | [查看](./week15) |
+
+## 提交建议
+
+- 每周作业单独放在对应 week 文件夹中。
+- README 需要包含实验目标、实验环境、操作步骤、运行命令、结果展示和总结。
+- 图片、视频、代码文件尽量和 README 放在同一个 week 文件夹内，便于老师查看。
+- 每次完成作业后及时 commit 并 push，保持提交记录清楚。
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=110&section=footer&color=0:10B981,50:2563EB,100:111827" alt="footer wave" />
+
+</div>
