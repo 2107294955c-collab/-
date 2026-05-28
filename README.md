@@ -44,14 +44,6 @@ ai-robot-homework/
 |   |-- img/               # detection result
 </pre>
 
-## Review-Oriented Improvements
-
-- Weekly README files are expanded into report-style records instead of short placeholders.
-- Existing screenshots and videos are linked from their matching week pages.
-- Weeks with code-oriented work include command sections and code-file expectations.
-- Remote camera notes use a WebSocket-style access pattern, written as ws://<tailscale-ip>:5000, to match the requested Codex optimization.
-- Empty weeks are documented honestly as archive or organization weeks instead of being left blank.
-
 ## Week Index
 
 | Week | Topic | Evidence | Link |
