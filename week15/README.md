@@ -1,46 +1,71 @@
-# Week 15 - Tailscale Mobile Camera Bridge
+# Week 15 — Week14 Project Archive & Final Summary
 
 ## Task Goal
 
-This week connects a phone and computer through Tailscale and uses the mobile camera as a remote vision source. The access note is written with ws://<tailscale-ip>:5000 to match the requested Codex WebSocket-style optimization.
+Archive the complete Week14 robot dog (PyBullet) and turtle maze (TurtleSim) project code and final project report into Week15 as the course capstone deliverable.
 
 ## Folder Check
 
 <pre>
 week15/
-|-- README.md          # required report
-|-- img/               # detection screenshot
-|-- code/              # required when camera bridge code exists
+|-- README.md                   # required report
+|-- img/                        # screenshots
+|-- Week14_项目报告.docx         # Week14 project report
+|-- server.py                   # PyBullet robot dog simulation server
+|-- agent.py                    # AI agent decision controller
+|-- maze.py                     # Maze map generation
+|-- explorer.py                 # Autonomous maze explorer
+|-- index.html                  # Robot dog web control UI
+|-- docker-compose.yml          # Docker container orchestration
+|-- turtlesim_web_bridge.py     # TurtleSim ROS2 web bridge
+|-- turtlesim_maze.py           # Turtle maze map
+|-- turtlesim_explorer.py       # Turtle maze explorer
+|-- turtlesim_index.html        # Turtle control web UI
 </pre>
 
 ## Environment
 
-- Tailscale
-- Python
-- WebSocket-style local service address
-- Mobile browser camera
-- ArUco marker
+- **Track A — PyBullet Robot Dog**
+  - Python 3.12 + PyBullet + aiohttp
+  - WSL2 Ubuntu 24.04 + Docker Engine
+  - DeepSeek API (Agent mode)
+  - Tailscale (mobile remote control)
+- **Track B — TurtleSim Maze**
+  - ROS2 Humble (Docker container)
+  - TurtleSim + custom maze/explorer modules
+  - Web bridge for browser control
 
-## Steps
+## Architecture
 
-1. Connect phone and computer to Tailscale.
-2. Start the camera bridge service.
-3. Open ws://<tailscale-ip>:5000 from the mobile side or configure the service endpoint with WebSocket transport.
-4. Allow camera permission and detect ArUco ID 0.
+```
+Mobile Web Controller → Tailscale → WSL2 → Docker(ROS2) / PyBullet → Robot Motion
+```
 
-## Commands
+- Port 8765: Track A robot dog web controller
+- Port 8080: Track B turtle controller
+- Port 6080: noVNC remote desktop
+- `PYBULLET_GUI=0`: DIRECT mode (low resource usage)
 
-<pre><code>cd ~/ai-robot-class.github.io
-mkdir -p week15/img
-python3 camera_bridge.py</code></pre>
+## Key Commands
+
+<pre><code># Start PyBullet simulation (Agent mode)
+wsl -d Ubuntu-24.04 -u root bash -c "cd /mnt/d/ai-robotics-course/week14_starters/pybullet_dog && DEEPSEEK_API_KEY=sk-xxx PYBULLET_GUI=0 python3 server.py"
+
+# Start Docker containers (TurtleSim Track B)
+wsl -d Ubuntu-24.04 -u root bash -c "service docker start && cd /mnt/d/ai-robotics-course/week14_starters/docker && docker compose up -d"
+
+# View PyBullet logs
+wsl -d Ubuntu-24.04 -u root bash -c "cat /tmp/pybullet_wsl.log"</code></pre>
 
 ## Result
 
-<img src="img/result.jpeg" width="800" alt="ArUco detection result">
+- Full project code archived for both Track A (PyBullet robot dog) and Track B (TurtleSim maze)
+- Project report: `Week14_项目报告.docx`
+- Mobile remote control via Tailscale IP `100.66.42.5:8765`
 
 ## Summary
 
-The experiment shows how a mobile camera can become a robot vision input. Switching the documented endpoint style from HTTPS to WebSocket clarifies the intended real-time communication direction.
+This project established a complete pipeline from mobile web controller to simulated robot: Tailscale networking → WSL2 VM → Docker/ROS2 → PyBullet physics simulation. Key challenges solved include Windows-WSL2 port forwarding (bypassed Docker, ran PyBullet directly in WSL), container dependency persistence after rebuild, and PyBullet GUI resource overhead (switched to DIRECT mode).
 
 ---
 
