@@ -56,8 +56,11 @@ ai-robot-homework/
 | week6 | KITTI dataset and multi-sensor visualization | Image | [Open](./week6) |
 | week7 | Markdown and GitHub organization | README | [Open](./week7) |
 | week8 | Docker ROS2 desktop container | Image | [Open](./week8) |
+| week9 | Robot and machine vision math basics | Image | [Open](./week9) |
 | week10 | Docker and OpenCV experiment | Image | [Open](./week10) |
 | week11 | Screenshot archive and verification | Image | [Open](./week11) |
+| week12 | Phone camera, ArUco detection and distance estimation | Image | [Open](./week12) |
+| week13 | Quadruped robot basics and final project preparation | Image | [Open](./week13) |
 | week14 | Laikago stability debugging | Image | [Open](./week14) |
 | week15 | Tailscale mobile camera bridge | Image | [Open](./week15) |
 
