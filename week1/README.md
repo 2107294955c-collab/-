@@ -36,7 +36,7 @@ The most important result of this week is not a robot demo, but a reliable submi
 
 ---
 
-n## 遇到的问题与解决
+## 遇到的问题与解决
 
 | 问题 | 原因 | 解决方案 |
 |------|------|----------|

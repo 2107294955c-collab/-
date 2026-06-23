@@ -44,7 +44,7 @@ Quadruped stability depends on control logic and physical contact. This week doc
 
 ---
 
-n## 遇到的问题与解决
+## 遇到的问题与解决
 
 | 问题 | 原因 | 解决方案 |
 |------|------|----------|

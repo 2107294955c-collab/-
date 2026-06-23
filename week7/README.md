@@ -42,7 +42,7 @@ Good documentation is part of the homework. A clear README helps the reviewer fi
 
 ---
 
-n## 遇到的问题与解决
+## 遇到的问题与解决
 
 | 问题 | 原因 | 解决方案 |
 |------|------|----------|

@@ -41,7 +41,7 @@ A correct ROS2 installation is the foundation of the whole course. This week con
 
 ---
 
-n## 遇到的问题与解决
+## 遇到的问题与解决
 
 | 问题 | 原因 | 解决方案 |
 |------|------|----------|

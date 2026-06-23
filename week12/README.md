@@ -1,83 +1,104 @@
 # Week 12：手机摄像头、ArUco 识别与距离估算实验
 
-## 一、实验基本信息
+## 实验基本信息
 
 课程：AI Robotics  
 主题：手机摄像头输入、ArUco 标记识别、距离估算  
-实验工具：Python、OpenCV、ArUco、WSL  
+工具：Python、OpenCV、ArUco、WSL
 
----
+本周实验围绕机器人视觉展开。目标是理解机器人如何通过摄像头识别视觉标记，并根据图像中的像素尺寸估算目标与摄像头之间的距离。
 
-## 二、实验目标
+## 实验目标
 
-本周实验主要围绕机器人视觉展开，目标是理解机器人如何通过摄像头识别视觉标记，并进一步估算目标与摄像头之间的距离。
-
-本次实验完成内容：
+本周完成的内容包括：
 
 1. 使用 OpenCV 生成 ArUco 标记。
 2. 使用 `DICT_4X4_50` 字典识别 ArUco。
-3. 成功识别课堂要求的 ArUco ID 6。
+3. 识别课堂要求的 ArUco ID 6。
 4. 根据标记像素宽度估算距离。
 5. 保存识别结果图和距离估算图。
 
----
+## 文件结构
 
-## 三、实验原理
+```txt
+week12/
+|-- README.md
+|-- aruco_generate_detect.py
+|-- img/
+|   |-- aruco_detect.png
+|   |-- distance_demo.png
+|   |-- screenshot_1.png
+|   |-- screenshot_2.png
+```
+
+## 实验原理
 
 ### 1. ArUco 标记
 
-ArUco 是一种常用于机器人视觉定位的黑白方形标记。每个标记都有唯一 ID，机器人可以通过摄像头识别 ID 和角点位置。
+ArUco 是一种常用于机器人视觉定位的黑白方形标记。每个标记都有唯一 ID，机器人可以通过摄像头识别 ID 和角点位置。在实际机器人应用中，ArUco 可以用于定位、导航、距离估计和相机标定。
 
-在本实验中，我使用的标记是：
+本实验使用：
 
 - 字典：`DICT_4X4_50`
 - 标记 ID：`6`
+- 标记尺寸：300 像素
 
 ### 2. ArUco 识别流程
 
-ArUco 识别过程主要包括：
+识别过程主要包括：
 
-1. 输入图像
-2. 转换为灰度图
-3. 检测候选方形区域
-4. 解码 ArUco ID
-5. 绘制检测框和 ID 信息
+1. 输入图像。
+2. 转换为灰度图。
+3. 检测候选方形区域。
+4. 解码 ArUco ID。
+5. 绘制检测框和 ID 信息。
+6. 根据角点距离估算标记在图像中的像素宽度。
 
 ### 3. 距离估算方法
 
-当已知 ArUco 标记的实际宽度时，可以通过图像中的像素宽度估算距离。
-
-基本思路：
+当已知 ArUco 标记的实际宽度时，可以通过图像中的像素宽度估算距离：
 
 ```txt
-距离 = 实际宽度 × 焦距 / 图像中的像素宽度
+distance = real_marker_width * focal_length / pixel_width
+```
+
+本实验使用简化模型，假设标记实际宽度为 `0.05 m`，焦距为 `700 px`。虽然这不是严格标定后的真实摄像头模型，但足够说明“像素宽度越大，目标越近；像素宽度越小，目标越远”的基本关系。
+
+## 运行方法
+
+```bash
 python3 aruco_generate_detect.py
+```
 
+程序会在 `img/` 目录生成并保存：
 
----
+- `aruco_detect.png`
+- `distance_demo.png`
 
-## 五、实验截图
+## 实验截图
 
-### 1. ArUco ID 6 识别结果
+### ArUco ID 6 识别结果
 
-![ArUco识别结果](img/aruco_detect.png)
+![ArUco 识别结果](img/aruco_detect.png)
 
-### 2. 距离估算结果
+### 距离估算结果
 
 ![距离估算结果](img/distance_demo.png)
-n![ArUco识别结果](img/aruco_detect.png)
-n![ArUco识别结果](img/aruco_detect.png)
 
----
+### 补充截图
 
-## 六、English Summary
+![补充截图 1](img/screenshot_1.png)
 
-In this week, I learned how to use OpenCV and ArUco markers for robot vision. I generated and detected an ArUco marker with ID 6, then estimated the distance between the camera and the marker based on the marker size in pixels.
+![补充截图 2](img/screenshot_2.png)
 
-This experiment helped me understand how robots can extract useful spatial information from visual input.
+## 遇到的问题与解决
 
----
+| 问题 | 原因 | 解决方案 |
+| --- | --- | --- |
+| 不同 OpenCV 版本 API 不一致 | 新旧版本的 ArUco 检测接口不同 | 在代码中判断 `ArucoDetector` 是否存在，兼容两种写法 |
+| 距离估算不是实际测量值 | 焦距没有经过真实相机标定 | 在 README 中说明这是简化估算模型 |
+| 标记图像过小会影响识别 | 角点检测需要清晰边界 | 生成 300 像素标记，并放在白色画布中央 |
 
-## 七、한국어 요약
+## 学习总结
 
-이번 주에는 OpenCV와 ArUco 마커를 사용하여 로봇 비전의 기본 원리를 학습하였다. ID 6번 ArUco 마커를 생성하고 인식하였으며, 이미지에서의 픽셀 크기를 이용하여 거리 추정을 진행하였다.
+通过本周实验，我理解了机器人视觉识别的基本流程：图像输入、标记检测、ID 解码、角点提取和距离估算。ArUco 标记虽然简单，但它把视觉感知和空间定位连接起来，是机器人实验中非常实用的工具。后续如果使用手机摄像头或机器人摄像头，只需要把输入图像换成实时视频帧，就可以扩展成在线识别系统。

@@ -42,7 +42,7 @@ A screenshot-only week still needs context. This page makes the stored evidence 
 
 ---
 
-n## 遇到的问题与解决
+## 遇到的问题与解决
 
 | 问题 | 原因 | 解决方案 |
 |------|------|----------|

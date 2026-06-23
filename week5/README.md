@@ -42,7 +42,7 @@ Linux permissions affect whether scripts and robot packages can run correctly. C
 
 ---
 
-n## 遇到的问题与解决
+## 遇到的问题与解决
 
 | 问题 | 原因 | 解决方案 |
 |------|------|----------|
