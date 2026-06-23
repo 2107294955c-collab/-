@@ -32,9 +32,9 @@ ls -la</code></pre>
 
 ## Result
 
-<video src="img/录屏 2026-04-02 10-56-36.webm" width="800" controls>experiment recording</video>
+<video src="img/experiment_video.webm" width="800" controls>experiment recording</video>
 
-[Open original recording](img/录屏 2026-04-02 10-56-36.webm)
+[Open original recording](img/experiment_video.webm)
 
 ## Summary
 

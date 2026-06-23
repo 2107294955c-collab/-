@@ -35,10 +35,10 @@ rqt</code></pre>
 
 ## Result
 
-<img src="img/粘贴的图像.png" width="800" alt="KITTI visualization screenshot">
-n<img src="img&粘贴的图像.png" width="800" alt="KITTI visualization screenshot">
-n<img src="img&粘贴的图像.png" width="800" alt="KITTI visualization screenshot">
-n<img src="img&粘贴的图像.png" width="800" alt="KITTI visualization screenshot">
+<img src="img/screenshot_2.png" width="800" alt="KITTI visualization screenshot">
+n<img src="img&screenshot_2.png" width="800" alt="KITTI visualization screenshot">
+n<img src="img&screenshot_2.png" width="800" alt="KITTI visualization screenshot">
+n<img src="img&screenshot_2.png" width="800" alt="KITTI visualization screenshot">
 
 ## Summary
 

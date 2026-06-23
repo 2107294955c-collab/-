@@ -33,10 +33,10 @@ week3/
 
 ## Result
 
-<img src="img/粘贴的图像.png" width="800" alt="Week 3 ROS2 interaction screenshot">
-n<img src="img&粘贴的图像.png" width="800" alt="Week 3 ROS2 interaction screenshot">
-n<img src="img&粘贴的图像.png" width="800" alt="Week 3 ROS2 interaction screenshot">
-n<img src="img&粘贴的图像.png" width="800" alt="Week 3 ROS2 interaction screenshot">
+<img src="img/screenshot_2.png" width="800" alt="Week 3 ROS2 interaction screenshot">
+n<img src="img&screenshot_2.png" width="800" alt="Week 3 ROS2 interaction screenshot">
+n<img src="img&screenshot_2.png" width="800" alt="Week 3 ROS2 interaction screenshot">
+n<img src="img&screenshot_2.png" width="800" alt="Week 3 ROS2 interaction screenshot">
 
 ## Summary
 

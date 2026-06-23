@@ -33,10 +33,10 @@ ros2 run turtlesim turtlesim_node</code></pre>
 
 ## Result
 
-<img src="img/粘贴的图像.png" width="800" alt="Docker ROS2 desktop screenshot">
-n<img src="img&粘贴的图像.png" width="800" alt="Docker ROS2 desktop screenshot">
-n<img src="img&粘贴的图像.png" width="800" alt="Docker ROS2 desktop screenshot">
-n<img src="img&粘贴的图像.png" width="800" alt="Docker ROS2 desktop screenshot">
+<img src="img/screenshot_2.png" width="800" alt="Docker ROS2 desktop screenshot">
+n<img src="img&screenshot_2.png" width="800" alt="Docker ROS2 desktop screenshot">
+n<img src="img&screenshot_2.png" width="800" alt="Docker ROS2 desktop screenshot">
+n<img src="img&screenshot_2.png" width="800" alt="Docker ROS2 desktop screenshot">
 
 ## Summary
 

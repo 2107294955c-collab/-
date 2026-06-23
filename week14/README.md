@@ -33,10 +33,10 @@ week14/
 
 ## Result
 
-<img src="img/截图 2026-05-21 10-21-51.png" width="800" alt="Laikago stability screenshot">
-n<img src="img&截图 2026-05-21 10-21-51.png" width="800" alt="Laikago stability screenshot">
-n<img src="img&截图 2026-05-21 10-21-51.png" width="800" alt="Laikago stability screenshot">
-n<img src="img&截图 2026-05-21 10-21-51.png" width="800" alt="Laikago stability screenshot">
+<img src="img/screenshot_2.png" width="800" alt="Laikago stability screenshot">
+n<img src="img&screenshot_2.png" width="800" alt="Laikago stability screenshot">
+n<img src="img&screenshot_2.png" width="800" alt="Laikago stability screenshot">
+n<img src="img&screenshot_2.png" width="800" alt="Laikago stability screenshot">
 
 ## Summary
 
