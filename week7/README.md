@@ -36,6 +36,16 @@ git push origin main</code></pre>
 
 The repository becomes easier to evaluate because each week follows a predictable report structure.
 
+## Screenshot Evidence
+
+The following screenshots record the Markdown organization and square-path review result used for this week.
+
+![Markdown organization screenshot 1](img/screenshot_1.png)
+
+![Markdown organization screenshot 2](img/screenshot_2.png)
+
+![Square path result](img/square_result.png)
+
 ## Summary
 
 Good documentation is part of the homework. A clear README helps the reviewer find goals, commands, screenshots, code, and conclusions quickly.

@@ -34,6 +34,13 @@ week13/
 |   |-- simulation_run.png
 ```
 
+## 评分材料入口
+
+- [四足步态代码](quadruped_walk.py)
+- [AI 协作记录](ai_chat_log.md)
+- [学习反思](reflection.md)
+- [项目准备脚本](quadruped_project_demo.py)
+
 ## 理论整理
 
 ### 1. 为什么需要四足机器人

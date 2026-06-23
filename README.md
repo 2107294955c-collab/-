@@ -62,6 +62,15 @@ ai-robot-homework/
 | week13 | Quadruped robot basics and final project preparation | Image | [Open](./week13) |
 | week14 | Laikago + TurtleSim final project | Image / PDF / Code | [Open](./week14) |
 
+## Final Project Quick Links
+
+- [Week14 project page](./week14)
+- [Week14 demo video](./week14/demo_video.mp4)
+- [Week14 PDF report](./week14/week14_XXXX.pdf)
+- [Week14 project summary](./week14/project_summary.md)
+- [Week13 AI collaboration log](./week13/ai_chat_log.md)
+- [Week13 reflection](./week13/reflection.md)
+
 ## How To Review
 
 1. Open the week folder from the index.
