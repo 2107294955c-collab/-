@@ -65,8 +65,8 @@ python3 aruco_generate_detect.py
 ### 2. 距离估算结果
 
 ![距离估算结果](img/distance_demo.png)
-n![ArUco识别结果](img&aruco_detect.png)
-n![ArUco识别结果](img&aruco_detect.png)
+n![ArUco识别结果](img/aruco_detect.png)
+n![ArUco识别结果](img/aruco_detect.png)
 
 ---
 

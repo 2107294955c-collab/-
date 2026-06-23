@@ -35,9 +35,9 @@ docker ps</code></pre>
 ## Result
 
 <img src="img/screenshot_2.png" width="800" alt="OpenCV environment verification screenshot">
-n<img src="img&screenshot_2.png" width="800" alt="OpenCV environment verification screenshot">
-n<img src="img&screenshot_2.png" width="800" alt="OpenCV environment verification screenshot">
-n<img src="img&screenshot_2.png" width="800" alt="OpenCV environment verification screenshot">
+<img src="img/screenshot_2.png" width="800" alt="OpenCV environment verification screenshot">
+<img src="img/screenshot_2.png" width="800" alt="OpenCV environment verification screenshot">
+<img src="img/screenshot_2.png" width="800" alt="OpenCV environment verification screenshot">
 
 ## Summary
 
