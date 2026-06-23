@@ -53,4 +53,42 @@ n## 遇到的问题与解决
 | 截图无法正常显示 | 图片路径错误 | 检查相对路径，确保文件在正确目录 |
 | 代码运行失败 | 缺少依赖包 | 使用 pip install 补全缺失的依赖 |
 
+---
+
+## Week15 Project Archive (Merged)
+
+### Project Files
+
+| 文件 | 说明 |
+|------|------|
+| `Week14_项目报告.pdf` | 完整项目文档 |
+| `server.py` | PyBullet 仿真服务器 |
+| `agent.py` | AI Agent 控制器 |
+| `maze.py` | 迷宫地图生成 |
+| `explorer.py` | 迷宫自主探索 |
+| `index.html` | 网页控制面板 |
+| `docker-compose.yml` | Docker 编排 |
+| `turtlesim_web_bridge.py` | ROS2 Web 桥接 |
+| `turtlesim_maze.py` | 乌龟迷宫 |
+| `turtlesim_explorer.py` | 乌龟探索 |
+| `turtlesim_index.html` | 乌龟网页控制 |
+
+### 系统架构
+
+手机网页 → Tailscale → WSL2 → Docker/ROS2 → PyBullet 仿真
+
+| 端口 | 服务 |
+|------|------|
+| 8765 | 机器狗 Web 控制器 |
+| 8080 | 乌龟控制器 |
+| 6080 | noVNC 桌面 |
+
+### 遇到的问题与解决
+
+| 问题 | 解决方案 |
+|------|----------|
+| WSL2 端口不通 | 配置端口转发 |
+| 容器重建后依赖丢失 | 固化至 Dockerfile |
+| PyBullet GUI 资源占用高 | 切换 DIRECT 模式 |
+
 [Back to main archive](../README.md)

@@ -39,7 +39,6 @@ ai-robot-homework/
 |-- week14/
 |   |-- README.md          # simulation/debug report
 |   |-- img/               # result screenshots
-|-- week15/
 |   |-- README.md          # remote camera report
 |   |-- img/               # detection result
 </pre>
@@ -61,8 +60,7 @@ ai-robot-homework/
 | week11 | Screenshot archive and verification | Image | [Open](./week11) |
 | week12 | Phone camera, ArUco detection and distance estimation | Image | [Open](./week12) |
 | week13 | Quadruped robot basics and final project preparation | Image | [Open](./week13) |
-| week14 | Laikago stability debugging | Image | [Open](./week14) |
-| week15 | Tailscale mobile camera bridge | Image | [Open](./week15) |
+| week14 | Laikago + TurtleSim final project | Image / PDF / Code | [Open](./week14) |
 
 ## How To Review
 
