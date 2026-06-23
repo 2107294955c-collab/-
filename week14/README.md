@@ -1,94 +1,123 @@
-# Week 14 - Laikago Stability Debugging
+# Week 14：手机遥控 + 迷宫探索小组项目
 
-## Task Goal
+## 项目目标
 
-This week focuses on Laikago quadruped stability in PyBullet. The work investigates orientation, leg polarity, inverse kinematics, and startup control.
+本周完成期末小组项目：使用网页控制界面远程控制机器人，并结合迷宫地图与自动探索逻辑，实现“手机遥控 + 迷宫探索”的综合演示。项目方向为 PyBullet 机器狗，同时保留 turtlesim 版本作为对照和备用演示。
 
-## Folder Check
+## 交付清单
 
-<pre>
+```txt
 week14/
-|-- README.md          # required report
-|-- img/               # result screenshots
-|-- code/              # recommended when source exists
-</pre>
+|-- README.md
+|-- week14_XXXX.pdf       # 项目报告
+|-- demo_video.mp4        # 演示视频
+|-- index.html            # 手机遥控网页
+|-- server.py             # 网络接收与机器人控制服务器
+|-- maze.py               # 迷宫地图与碰撞逻辑
+|-- explorer.py           # 自动探索与路径规划
+|-- agent.py              # AI Agent 控制逻辑
+|-- pybullet_perfect.py   # PyBullet 调试脚本
+|-- turtlesim_index.html
+|-- turtlesim_web_bridge.py
+|-- turtlesim_maze.py
+|-- turtlesim_explorer.py
+|-- docker-compose.yml
+|-- img/
+```
 
-## Environment
+## 核心功能
 
-- Python
-- PyBullet
-- Laikago URDF
-- Inverse kinematics
+### 1. 手机遥控网页
 
-## Steps
+`index.html` 提供浏览器控制界面，包含前进、后退、左转、右转、停止等交互按钮。手机和电脑在同一网络环境下时，可以通过网页向后端控制程序发送指令。
 
-1. Diagnose unstable landing and joint conflicts.
-2. Check robot orientation and front/back leg polarity.
-3. Use PyBullet inverse kinematics for foot targets.
-4. Add startup buffering to reduce sudden force.
+### 2. 网络控制服务器
 
-## Commands
+`server.py` 是常驻控制程序，负责接收网页端控制命令，并把命令转换成机器人运动控制动作。该文件对应评分标准中的“网络接收与机器人控制应写在同一常驻程序中”。
 
-<pre><code>python3 pybullet_perfect.py</code></pre>
+### 3. 迷宫地图
 
-## Result
+`maze.py` 定义迷宫地图、障碍物和可通行区域，用于验证机器人是否能够在有限空间中完成移动和探索任务。
 
-<img src="img/screenshot_2.png" width="800" alt="Laikago stability screenshot">
-<img src="img/screenshot_2.png" width="800" alt="Laikago stability screenshot">
-<img src="img/screenshot_2.png" width="800" alt="Laikago stability screenshot">
-<img src="img/screenshot_2.png" width="800" alt="Laikago stability screenshot">
+### 4. 自动探索逻辑
 
-## Summary
+`explorer.py` 实现迷宫探索逻辑，包含路径搜索、目标点选择和自动移动策略。项目中使用该模块展示从遥控到自动探索的扩展能力。
 
-Quadruped stability depends on control logic and physical contact. This week documents practical debugging beyond simple waveform movement.
+### 5. turtlesim 备用演示
 
----
+项目同时保留 `turtlesim_web_bridge.py`、`turtlesim_maze.py`、`turtlesim_explorer.py` 和 `turtlesim_index.html`，用于展示 ROS2 turtlesim 方向的网页控制和迷宫探索思路。
+
+## 运行方式
+
+### PyBullet 机器狗方向
+
+```bash
+python3 server.py
+```
+
+启动后打开：
+
+```txt
+http://localhost:8765
+```
+
+### turtlesim 备用方向
+
+```bash
+python3 turtlesim_web_bridge.py
+```
+
+打开：
+
+```txt
+http://localhost:8080
+```
+
+## 演示视频
+
+<video src="demo_video.mp4" width="800" controls>week14 demo video</video>
+
+[打开演示视频](demo_video.mp4)
+
+## 项目报告
+
+[打开 PDF 项目报告](week14_XXXX.pdf)
+
+## 实验截图
+
+<img src="img/screenshot_2.png" width="800" alt="Week14 project screenshot">
+
+<img src="img/screenshot_2.png" width="800" alt="Week14 project screenshot">
+
+<img src="img/screenshot_2.png" width="800" alt="Week14 project screenshot">
+
+<img src="img/screenshot_2.png" width="800" alt="Week14 project screenshot">
+
+## 系统结构
+
+```txt
+手机浏览器
+   ↓
+index.html 控制按钮
+   ↓
+server.py 接收指令
+   ↓
+PyBullet / ROS2 控制逻辑
+   ↓
+maze.py + explorer.py 迷宫探索
+```
 
 ## 遇到的问题与解决
 
 | 问题 | 原因 | 解决方案 |
-|------|------|----------|
-| 环境配置报错 | 依赖版本不兼容 | 查阅官方文档确认版本匹配后重新安装 |
-| 命令执行无响应 | 环境变量未加载 | 执行 source 加载 ROS2 环境脚本 |
-| 截图无法正常显示 | 图片路径错误 | 检查相对路径，确保文件在正确目录 |
-| 代码运行失败 | 缺少依赖包 | 使用 pip install 补全缺失的依赖 |
+| --- | --- | --- |
+| 手机访问本机服务不稳定 | WSL2、端口、防火墙和局域网地址都会影响访问 | 使用固定端口并检查本机 IP、端口转发和防火墙设置 |
+| PyBullet 机器狗运动容易不稳定 | 关节方向、初始姿态和控制增益影响仿真 | 先用 `pybullet_perfect.py` 调试稳定姿态，再接入服务器 |
+| 迷宫探索需要清晰地图 | 如果障碍物和通行区域不明确，路径规划容易失败 | 在 `maze.py` 中集中维护地图和碰撞规则 |
+| 前后端命令需要统一 | 网页按钮和后端动作名称不一致会导致控制失败 | 在 `server.py` 中统一命令映射，如 forward、backward、left、right、stop |
 
----
+## 学习总结
 
-## Week15 Project Archive (Merged)
-
-### Project Files
-
-| 文件 | 说明 |
-|------|------|
-| `Week14_项目报告.pdf` | 完整项目文档 |
-| `server.py` | PyBullet 仿真服务器 |
-| `agent.py` | AI Agent 控制器 |
-| `maze.py` | 迷宫地图生成 |
-| `explorer.py` | 迷宫自主探索 |
-| `index.html` | 网页控制面板 |
-| `docker-compose.yml` | Docker 编排 |
-| `turtlesim_web_bridge.py` | ROS2 Web 桥接 |
-| `turtlesim_maze.py` | 乌龟迷宫 |
-| `turtlesim_explorer.py` | 乌龟探索 |
-| `turtlesim_index.html` | 乌龟网页控制 |
-
-### 系统架构
-
-手机网页 → Tailscale → WSL2 → Docker/ROS2 → PyBullet 仿真
-
-| 端口 | 服务 |
-|------|------|
-| 8765 | 机器狗 Web 控制器 |
-| 8080 | 乌龟控制器 |
-| 6080 | noVNC 桌面 |
-
-### 遇到的问题与解决
-
-| 问题 | 解决方案 |
-|------|----------|
-| WSL2 端口不通 | 配置端口转发 |
-| 容器重建后依赖丢失 | 固化至 Dockerfile |
-| PyBullet GUI 资源占用高 | 切换 DIRECT 模式 |
+Week14 项目把前面课程中的网页、Python、机器人控制、迷宫、路径规划和报告整理结合在一起。相比单周实验，期末项目更强调系统完整性：不仅要有代码，还要能通过网页控制、能展示迷宫探索过程、能提供演示视频和 PDF 报告。通过本项目，我理解了机器人项目交付时“代码、文档、截图、视频、报告”都很重要，只有这些材料放在一起，评审者才能完整理解项目效果。
 
 [Back to main archive](../README.md)
