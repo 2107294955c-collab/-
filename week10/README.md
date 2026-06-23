@@ -35,11 +35,23 @@ docker ps</code></pre>
 ## Result
 
 <img src="img/截图 2026-05-07 10-05-07.png" width="800" alt="OpenCV environment verification screenshot">
+n<img src="img&截图 2026-05-07 10-05-07.png" width="800" alt="OpenCV environment verification screenshot">
+n<img src="img&截图 2026-05-07 10-05-07.png" width="800" alt="OpenCV environment verification screenshot">
+n<img src="img&截图 2026-05-07 10-05-07.png" width="800" alt="OpenCV environment verification screenshot">
 
 ## Summary
 
 The task prepares a reusable vision environment. OpenCV and PyBullet support later perception and simulation work.
 
 ---
+
+n## 遇到的问题与解决
+
+| 问题 | 原因 | 解决方案 |
+|------|------|----------|
+| 环境配置报错 | 依赖版本不兼容 | 查阅官方文档确认版本匹配后重新安装 |
+| 命令执行无响应 | 环境变量未加载 | 执行 source 加载 ROS2 环境脚本 |
+| 截图无法正常显示 | 图片路径错误 | 检查相对路径，确保文件在正确目录 |
+| 代码运行失败 | 缺少依赖包 | 使用 pip install 补全缺失的依赖 |
 
 [Back to main archive](../README.md)

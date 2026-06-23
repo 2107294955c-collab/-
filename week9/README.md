@@ -54,6 +54,8 @@ R = [[cosθ, -sinθ],
 ### 路径规划结果
 
 ![路径规划](img/path_result.png)
+n![数学计算](img&math_run.png)
+n![数学计算](img&math_run.png)
 
 ---
 
