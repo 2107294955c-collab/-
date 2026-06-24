@@ -17,7 +17,7 @@ This project connects a browser-based control panel with a Python robot-control 
 | `maze.py` | Maze map, obstacle layout, and collision-related logic |
 | `explorer.py` | Automatic exploration and path-planning logic |
 | `agent.py` | AI agent control helper |
-| `demo_video.mp4` | Recorded project demonstration |
+| `turtlesim_auto.mp4` | Recorded project demonstration |
 | `week14_XXXX.pdf` | Final PDF project report |
 | `docker-compose.yml` | Container orchestration file |
 | `turtlesim_web_bridge.py` | ROS2 turtlesim web bridge backup implementation |
@@ -38,7 +38,7 @@ Phone browser
 
 ## Demonstration Evidence
 
-- Demo video: [demo_video.mp4](demo_video.mp4)
+- Demo video: [turtlesim_auto.mp4](turtlesim_auto.mp4)
 - PDF report: [week14_XXXX.pdf](week14_XXXX.pdf)
 - Screenshot evidence: [img/](img/)
 

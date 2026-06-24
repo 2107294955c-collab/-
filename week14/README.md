@@ -13,7 +13,7 @@
 ## 快速入口
 
 - [项目总结](project_summary.md)
-- [演示视频](demo_video.mp4)
+- [演示视频](turtlesim_auto.mp4)
 - [PDF 项目报告](week14_XXXX.pdf)
 - [手机遥控网页](index.html)
 - [控制服务器](server.py)
@@ -26,7 +26,7 @@
 week14/
 |-- README.md
 |-- week14_XXXX.pdf       # 项目报告
-|-- demo_video.mp4        # 演示视频
+|-- turtlesim_auto.mp4    # 演示视频
 |-- index.html            # 手机遥控网页
 |-- server.py             # 网络接收与机器人控制服务器
 |-- maze.py               # 迷宫地图与碰撞逻辑
@@ -91,9 +91,9 @@ http://localhost:8080
 
 ## 演示视频
 
-<video src="demo_video.mp4" width="800" controls>week14 demo video</video>
+<video src="turtlesim_auto.mp4" width="800" controls>week14 demo video</video>
 
-[打开演示视频](demo_video.mp4)
+[点击查看本周演示视频](turtlesim_auto.mp4)
 
 ## 项目报告
 

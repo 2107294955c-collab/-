@@ -32,9 +32,9 @@ git add week11/README.md week11/img/week11_screenshot.png</code></pre>
 ## Result
 
 <img src="img/week11_screenshot.png" width="800" alt="Week 11 screenshot">
-<img src="img/week11_screenshot.png" width="800" alt="Week 11 screenshot">
-<img src="img/week11_screenshot.png" width="800" alt="Week 11 screenshot">
-<img src="img/week11_screenshot.png" width="800" alt="Week 11 screenshot">
+<img src="img/github_pages_prepare.png" width="800" alt="GitHub Pages preparation screenshot">
+<img src="img/docker_advanced.png" width="800" alt="Docker advanced screenshot">
+<img src="img/screenshot_1.png" width="800" alt="Additional Week 11 screenshot">
 
 ## Summary
 
